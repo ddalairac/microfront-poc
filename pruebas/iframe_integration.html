@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfront test 1</title>
+</head>
+
+<body>
+    <style>
+        html,
+        body {}
+        * {
+            box-sizing: border-box;
+        }
+        .all-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu {
+            background: grey;
+            height: 60px;
+            margin: 3px;
+            padding: 5px;
+        }
+        .content {
+            justify-content: space-between;
+            height: 500px;
+        }
+        .menu-side {
+            background: grey;
+            margin: 3px;
+            height: inherit;
+        }
+        .microfront {
+            background: #eee;
+            height: inherit;
+            flex-grow: 1;
+            margin: 3px;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <div class="menu all-center"> Top Menu </div>
+    <div class="content all-center">
+        <div class="menu menu-side all-center"> Side Menu</div>
+        <div class="microfront all-center">
+            <iframe src="http://localhost:8082/?client=testClient&survey=demoa" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>
