@@ -1,27 +1,25 @@
 {
-  "name": "microfront-v3",
+  "name": "mf-card",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "wcBuild": "vue-cli-service build --target wc --name mf-3 src/App.vue",
-    "serveWC": "vue-cli-service serve --target wc --name microfront3",
-    "buildWC": "vue-cli-service build --target wc --name microfront3",
+    "wcBuild": "vue-cli-service build --target wc --name v-card src/App.vue",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
     "root": true,
@@ -29,7 +27,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/essential",
       "eslint:recommended"
     ],
     "parserOptions": {

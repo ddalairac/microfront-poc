@@ -1,3 +1,5 @@
+
+
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
@@ -5,12 +7,17 @@
     <p>params: {{ params }}</p>
     <p>client: {{ client }}</p>
     <p>survey: {{ survey }}</p>
+  <SomeComponent></SomeComponent>
   </div>
 </template>
 
 <script>
+import SomeComponent from './components/some-comp.vue'
 export default {
   name: "App",
+  components:{
+      SomeComponent
+  },
   methods: {
     getParams() {
       var params = {};

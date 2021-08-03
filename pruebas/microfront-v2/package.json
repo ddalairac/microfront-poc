@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "wcBuild": "vue-cli-service build --prod --target wc --name mf-2 src/App.vue",
+
+    "serveWC": "vue-cli-service serve --target wc --name microfront2  --inline-vue ./src/lib.js",
+    "buildWC": "vue-cli-service build --target wc --name microfront2  --inline-vue ./src/lib.js",
+    "buildUDM": "vue-cli-service build --formats umd,umd-min --mode development --target lib --inline-vue --name microfront2 ./src/lib.js",
+    "serveUDM": "vue-cli-service serve --formats umd,umd-min --mode development --target lib --inline-vue --name microfront2 ./src/lib.js",
+
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
