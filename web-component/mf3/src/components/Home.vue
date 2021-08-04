@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <h1>Home page</h1>
     <img alt="Vue logo" src="../assets/logo.png" />
+    <h1>Home page</h1>
   </div>
 </template>
 
@@ -15,7 +15,11 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Home extends Vue {}
 </script>
 <style lang="scss">
-img{
-    width: 20px;
+.home{
+    display: flex;
+    align-items: center;
+    img{
+        height: 30px;
+    }
 }
 </style>

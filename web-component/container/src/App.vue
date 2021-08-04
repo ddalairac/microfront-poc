@@ -1,14 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <MenuTop />
+    <div class="container">
+      <MenuSide />
+      <div class="views">
+        <router-view />
+      </div>
     </div>
-    <router-view/>
   </div>
 </template>
 
+
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+import MenuTop from "./components/MenuTop.vue";
+import MenuSide from "./components/MenuSide.vue";
+@Component<App>({
+  components: {
+    MenuTop,
+    MenuSide,
+  },
+})
+export default class App extends Vue {}
+</script>
+
 <style lang="scss">
+html,body,#app{
+  height:100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,17 +40,18 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex-grow: 1;
 }
+.views{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 15px;
+    width: 100%;
+}
+
 </style>

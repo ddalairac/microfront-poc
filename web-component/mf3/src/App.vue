@@ -1,20 +1,8 @@
 <template>
-  <div id="app" class="card hard-line">
-    <h1>Web component 2</h1>
-    <div class="card">
+  <div id="app">
+    <div class="card hard-line">
       <div class="display-as-columns">
-        <h2>Router component</h2>
-        <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link>
-        </div>
-        <router-view />
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="display-as-columns">
-        <h2>Dinamic component</h2>
+        <h1>Web component 3</h1>
         <div>
           <button @click="onClickHome">home</button>
           <button @click="onClickAbout">About</button>
@@ -25,17 +13,12 @@
   </div>
 </template>
 
-
-
-
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
+import { Component, Vue } from "vue-property-decorator";
+import Home from "./components/Home.vue";
+import About from "./components/About.vue";
 
-
-@Component<App>({
+@Component({
   components: {
     Home,
     About,
@@ -73,7 +56,6 @@ export default class App extends Vue {
 }
 </script>
 
-
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -81,40 +63,26 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 
-#nav {
-  //   padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.card {
+  border: 1px #ddd solid;
+  border-radius: 5px;
+  padding: 5px;
+  &.hard-line {
+    border-color: #2c3e50;
   }
 }
 .display-as-columns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  >:nth-child(1),
-  >:nth-child(2),
-  >:nth-child(3){
-      width: 33%;
+  align-items: center;
+  > :nth-child(1),
+  > :nth-child(2),
+  > :nth-child(3) {
+    width: 33%;
   }
-}
-.card {
-  border: 1px #ddd solid;
-  border-radius: 5px;
-  padding: 5px;
-  &.hard-line{
-      border-color: #2c3e50;
-  }
-}
-h1,
-h2 {
-  margin: 0;
 }
 </style>
