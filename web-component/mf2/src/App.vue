@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
+  <div id="app" class="card hard-line">
+    <h1>Web component 2</h1>
     <div class="card">
-      <h2>Router component</h2>
-      <div id="nav">
-        <h1>Web component 2</h1>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+      <div class="display-as-columns">
+        <h2>Router component</h2>
+        <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link>
+        </div>
+        <router-view />
       </div>
-      <router-view />
     </div>
+
     <div class="card">
-      <h2>Dinamic component</h2>
-      <button @click="onClickHome">home</button>
-      <button @click="onClickAbout">About</button>
-      <component :is="dinamicComponent" />
+      <div class="display-as-columns">
+        <h2>Dinamic component</h2>
+        <div>
+          <button @click="onClickHome">home</button>
+          <button @click="onClickAbout">About</button>
+        </div>
+        <component :is="dinamicComponent" />
+      </div>
     </div>
     <!-- <div class="card">
       <h2>Harcode components</h2>
@@ -45,11 +52,11 @@ export enum AppEvent {
 export default class App extends Vue {
   data: any = null;
   dinamicComponent: any = "Home";
-  onClickHome(){
-      this.dinamicComponent = "Home";
+  onClickHome() {
+    this.dinamicComponent = "Home";
   }
-  onClickAbout(){
-      this.dinamicComponent = "About";
+  onClickAbout() {
+    this.dinamicComponent = "About";
   }
   created() {
     console.log("created() -> data:", this.data);
@@ -85,7 +92,7 @@ export default class App extends Vue {
 }
 
 #nav {
-  padding: 30px;
+  //   padding: 30px;
 
   a {
     font-weight: bold;
@@ -96,9 +103,26 @@ export default class App extends Vue {
     }
   }
 }
+.display-as-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  >:nth-child(1),
+  >:nth-child(2),
+  >:nth-child(3){
+      width: 33%;
+  }
+}
 .card {
-  border: 1px #2c3e50 solid;
+  border: 1px #ddd solid;
   border-radius: 5px;
   padding: 5px;
+  &.hard-line{
+      border-color: #2c3e50;
+  }
+}
+h1,
+h2 {
+  margin: 0;
 }
 </style>
