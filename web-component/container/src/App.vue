@@ -33,6 +33,9 @@ html,body,#app{
   margin: 0;
   border: none;
 }
+h1,h2,h3,ul{
+    text-align: left;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,6 +54,9 @@ html,body,#app{
     justify-content: center;
     align-items: top;
     padding: 15px;
+    width: 100%;
+}
+.page-1, .page-2, .page-3{
     width: 100%;
 }
 

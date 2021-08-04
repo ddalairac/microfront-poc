@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+// import Page1 from '../views/Page1.vue'
+import Page2 from '../views/Page2.vue'
+import Page3 from '../views/Page3.vue'
 
 Vue.use(VueRouter)
 
@@ -21,12 +24,12 @@ const routes: Array<RouteConfig> = [
   {
     path: '/page2',
     name: 'Page2',
-    component: () => import('../views/Page2.vue')
+    component: Page2
   },
   {
     path: '/page3',
     name: 'Page3',
-    component: () => import('../views/Page3.vue')
+    component: Page3
   }
 ]
 

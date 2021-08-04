@@ -1,9 +1,9 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link>
-    <router-link to="/page1">Page1</router-link>
-    <router-link to="/page2">Page2</router-link>
-    <router-link to="/page3">Page3</router-link>
+    <router-link to="page1">Page1</router-link>
+    <router-link to="page2">Page2</router-link>
+    <router-link to="page3">Page3</router-link> 
   </div>
 </template>
 
@@ -31,9 +31,12 @@ export default class MenuTop extends Vue {
     color: #2c3e50;
     padding: 10px;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    // &.router-link-active {
+    //   color: #8f1b1b;
+    // }
+    // &.router-link-active {
+    //   color: #42b983;
+    // }
   }
 }
 h3 {

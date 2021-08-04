@@ -2,12 +2,16 @@
   <div id="app">
     <div class="card hard-line">
       <div class="display-as-columns">
-        <h1>Web component 3</h1>
         <div>
+          <h1>Web component 3</h1>
+          <h3>{{ compName }}</h3>
+        </div>
+        <div>
+          <h2>Dinamic Component</h2>
           <button @click="onClickHome">home</button>
           <button @click="onClickAbout">About</button>
         </div>
-        <component :is="dinamicComponent" />
+        <component :is="dinamicComponent" class="card" />
       </div>
     </div>
   </div>
@@ -27,6 +31,7 @@ import About from "./components/About.vue";
 export default class App extends Vue {
   data: any = null;
   dinamicComponent: any = "Home";
+  compName = "<mf-3>";
   onClickHome() {
     this.dinamicComponent = "Home";
   }
@@ -34,6 +39,7 @@ export default class App extends Vue {
     this.dinamicComponent = "About";
   }
   created() {
+    console.log("%c<mf-3>", "background: black;padding: 10px;");
     console.log("created() -> data:", this.data);
   }
 
@@ -65,13 +71,16 @@ export default class App extends Vue {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 .card {
   border: 1px #ddd solid;
   border-radius: 5px;
   padding: 5px;
   &.hard-line {
     border-color: #2c3e50;
+  }
+  .card {
+    background: #eee;
+    padding: 15px;
   }
 }
 .display-as-columns {

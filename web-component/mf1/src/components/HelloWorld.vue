@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>some text</p>
+  <div class="card">
+    <p><b>Child component</b></p>
+    <p>{{ msg }}</p>
   </div>
 </template>
 

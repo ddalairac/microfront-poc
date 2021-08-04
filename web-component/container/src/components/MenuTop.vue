@@ -28,9 +28,9 @@ export default class MenuTop extends Vue {
     font-weight: bold;
     color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: white;
-    }
+    // &.router-link-exact-active {
+    //   color: white;
+    // }
   }
 }
 h3 {
