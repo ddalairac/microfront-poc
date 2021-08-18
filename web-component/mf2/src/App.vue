@@ -1,3 +1,4 @@
+
 <template>
   <div id="app" class="card hard-line">
     <h1>Web component 2</h1>
@@ -17,15 +18,19 @@
       <div class="display-as-columns">
         <h2>Dinamic component</h2>
         <div>
-          <button @click="onClickHome">home</button>
-          <button @click="onClickAbout">About</button>
+          <button class="btn btn-primary" @click="onClickHome">home</button>
+          <button class="btn btn-primary" @click="onClickAbout">About</button>
         </div>
         <component :is="dinamicComponent" />
       </div>
     </div>
+    <ul>
+        <li>Typescript</li>
+        <li>Router (not working)</li>
+        <li>Navigation: dinamic component</li>
+    </ul>
   </div>
 </template>
-
 
 
 
@@ -83,6 +88,10 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-bottom: 30px;
+}
+ul {
+  text-align: left;
 }
 
 #nav {

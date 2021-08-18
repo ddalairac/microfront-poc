@@ -8,11 +8,16 @@
         </div>
         <div>
           <h2>Dinamic Component</h2>
-          <button @click="onClickHome">home</button>
-          <button @click="onClickAbout">About</button>
+          <button class="btn btn-primary" @click="onClickHome">home</button>
+          <button class="btn btn-primary" @click="onClickAbout">About</button>
         </div>
         <component :is="dinamicComponent" class="card" />
       </div>
+      <ul>
+        <li>Typescript</li>
+        <li>Store</li>
+        <li>Navigation: dinamic component</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -69,7 +74,10 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-bottom: 30px;
+}
+ul {
+  text-align: left;
 }
 .card {
   border: 1px #ddd solid;

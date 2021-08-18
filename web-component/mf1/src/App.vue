@@ -5,6 +5,10 @@
       <h3>{{ compName }}</h3>
       <img alt="Vue logo" src="./assets/logo.png" />
       <HelloWorld msg="param data" />
+      <ul>
+        <li>Javascript</li>
+        <li>1 explicit child component</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -22,7 +26,7 @@ export default {
   },
   created() {
     console.log("%c<mf-1>", "background: black;padding: 10px;");
-  }
+  },
 };
 </script>
 
@@ -33,9 +37,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-bottom: 30px;
 }
-
+ul {
+  text-align: left;
+}
 .card {
   border: 1px #ddd solid;
   border-radius: 5px;
