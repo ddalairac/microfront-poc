@@ -17,6 +17,7 @@
         <li>Typescript</li>
         <li>Store</li>
         <li>Navigation: dinamic component</li>
+        <li>bootstrap-vue Package</li>
       </ul>
     </div>
   </div>
@@ -26,6 +27,10 @@
 import { Component, Vue } from "vue-property-decorator";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
+import { BootstrapVue } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 
 @Component({
   components: {

@@ -28,6 +28,7 @@
         <li>Typescript</li>
         <li>Router (not working)</li>
         <li>Navigation: dinamic component</li>
+        <li>bootstap CDN (@import)</li>
     </ul>
   </div>
 </template>
@@ -82,6 +83,7 @@ export default class App extends Vue {
 
 
 <style lang="scss">
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
