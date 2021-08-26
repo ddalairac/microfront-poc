@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>lib3 demo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="./mf2/dist/mf2-lib/lib2.umd.min.js"></script>
     <script src="./mf3/dist/mf3-lib/lib3.umd.min.js"></script>
     <link rel="stylesheet" href="./mf3/dist/mf3-lib/lib3.css">
 
@@ -12,6 +13,7 @@
 
 <body>
     <div id="app">
+        <lib2comp></lib2comp>
         <lib3comp></lib3comp>
     </div>
 
@@ -19,6 +21,7 @@
     <script>
         new Vue({
             components: {
+                lib2comp: lib2,
                 lib3comp: lib3
             }
         }).$mount('#app')
