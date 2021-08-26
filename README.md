@@ -6,11 +6,14 @@ https://docs.google.com/document/d/10DjG9HognYgkvulbJtmRvnNu58oUxprU3R6YpdaUEzw/
 
 ## html / js implementation examples
 
- - Web Components<br/>
-   https://ddalairac.github.io/microfront-poc/microfronts/wc.html
+ - Iframe<br/>
+   https://ddalairac.github.io/microfront-poc/microfronts/iframe.html
 
  - UMD library<br/>
    https://ddalairac.github.io/microfront-poc/microfronts/umd.html
+
+ - Web Components<br/>
+   https://ddalairac.github.io/microfront-poc/microfronts/wc.html
 
 
 ## SPA implementation example
