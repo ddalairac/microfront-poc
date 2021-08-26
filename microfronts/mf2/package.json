@@ -8,7 +8,8 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "buildWC": "vue-cli-service build --prod --target wc --name mf-2"
+    "buildWC":  "vue-cli-service build --dest ./dist/mf2-wc  --target wc  --name wc-2",
+    "buildLib": "vue-cli-service build --dest ./dist/mf2-lib --target lib --formats umd-min --name lib2"
   },
   "dependencies": {
     "core-js": "^3.6.5",

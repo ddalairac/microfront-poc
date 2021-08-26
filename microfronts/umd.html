@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>lib3 demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="./mf3-lib/lib3.umd.js"></script>
+    <link rel="stylesheet" href="./mf3-lib/lib3.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <lib3comp></lib3comp>
+    </div>
+
+    
+    <script>
+        new Vue({
+            components: {
+                lib3comp: lib3
+            }
+        }).$mount('#app')
+    </script>
+
+</body>
+
+</html>

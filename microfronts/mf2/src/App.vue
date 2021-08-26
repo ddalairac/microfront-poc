@@ -6,11 +6,11 @@
     <div class="card">
       <div class="display-as-columns">
         <h2>Router component</h2>
-        <!-- <div id="nav">
+        <div id="nav">
           <router-link to="/">Home</router-link> |
           <router-link to="/about">About</router-link>
         </div>
-        <router-view /> -->
+        <router-view />
       </div>
     </div>
 
@@ -59,24 +59,12 @@ export default class App extends Vue {
   }
   created() {
     console.log("%c<mf-2>", "background: black;padding: 10px;");
-    console.log("created() -> data:", this.data);
+    console.log("created()");
   }
 
-  async loadApp() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        console.log("setTimeout()");
-        resolve("fetch Data");
-      }, 10);
-    });
-  }
 
   mounted() {
-    console.log("mounted() -> data:", this.data);
-    this.loadApp().then((data) => {
-      this.data = data;
-      console.log("loadApp() -> data:", this.data);
-    });
+    console.log("mounted()");
   }
 }
 </script>

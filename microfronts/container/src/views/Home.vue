@@ -2,6 +2,10 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <v-card
+      title="param 1"
+      subtitle="param 2"
+    ></v-card>
   </div>
 </template>
 

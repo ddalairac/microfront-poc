@@ -27,10 +27,9 @@
 import { Component, Vue } from "vue-property-decorator";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
-import { BootstrapVue } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+// import { BootstrapVue } from 'bootstrap-vue'
+// import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 @Component({
   components: {
@@ -50,24 +49,36 @@ export default class App extends Vue {
   }
   created() {
     console.log("%c<mf-3>", "background: black;padding: 10px;");
-    console.log("created() -> data:", this.data);
+    console.log("created()");
   }
 
   async loadApp() {
     return new Promise((resolve, reject) => {
+      fetch("./data.json")
+        .then((response)=> {//console.log("response: ",response)
+          return response.json();
+        })
+        .catch((error)=> {
+          reject(error);
+        })
+        .then((d)=> {
+          resolve(d);
+        });
+
       setTimeout(() => {
-        console.log("setTimeout()");
-        resolve("fetch Data");
-      }, 10);
+        reject("Timeout");
+      }, 100);
     });
   }
 
   mounted() {
     console.log("mounted() -> data:", this.data);
-    this.loadApp().then((data) => {
-      this.data = data;
-      console.log("loadApp() -> data:", this.data);
-    });
+    this.loadApp()
+      .then((data) => {
+        this.data = data;
+        console.log("loadApp() -> data:", this.data);
+      })
+      .catch((error) => console.log("Fetch error: ",error));
   }
 }
 </script>

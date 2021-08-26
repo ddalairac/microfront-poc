@@ -8,7 +8,9 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "buildWC": "vue-cli-service build --prod --target wc --name mf-3"
+    "buildWCAsync": "vue-cli-service build --dest ./dist/mf3-wc-async --target wc-async --name wc-async-3 'src/components/*.vue' ",
+    "buildWC":      "vue-cli-service build --dest ./dist/mf3-wc  --target wc  --name wc-3",
+    "buildLib":     "vue-cli-service build --dest ./dist/mf3-lib --target lib --name lib3"
   },
   "dependencies": {
     "bootstrap": "^5.1.0",
