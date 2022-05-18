@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MF WC Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+  <link rel="stylesheet" href="./demo-wc.css">
+  <!-- WC -->
+  <script src="./dist/mf-simple-wc/mfsimple-wc.min.js"></script>
+  <script src="./dist/mf-store-wc/mfstore-wc.min.js"></script>
+  <script src="./dist/mf-store-wc-iv2/mfstore-wc-iv2.min.js"></script>
+  <script src="./dist/mf-dependencies-wc/mfdependencies-wc.min.js"></script>
+
+</head>
+
+<body>
+  <h1>DEMO: Microfront / Web components </h1>
+  <h2>html App</h2>
+  <div class="container">
+    <div class="col">
+      <h3>MF Simple (vue2 outsourced)</h3>
+      <div class="card">
+        <mfsimple-wc host-app="html page" />
+      </div>
+    </div>
+
+    <div class="col">
+      <h3>MF WC Store (vue2 outsourced)</h3>
+      <div class="card">
+        <mfstore-wc host-app="html page" />
+      </div>
+    </div>
+
+    <div class="col">
+      <h3>MF WC Store (vue2 inline) </h3>
+      <div class="card">
+        <mfstore-wc-iv2 host-app="html page" />
+      </div>
+    </div>
+
+    <div class="col">
+      <h3>MF WC Dependencies </h3>
+      <div class="card">
+        <mfdependencies-wc  />
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

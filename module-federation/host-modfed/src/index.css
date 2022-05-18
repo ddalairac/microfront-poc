@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  font-size: 3rem;
+  margin: auto;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+h1 {
+  /* color: #b74763; */
+  font-size: 35px;
+}
+h2 {
+  color: #b74763;
+  font-size: 30px;
+}
+p {
+    font-size: 16px;
+}

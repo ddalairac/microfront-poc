@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MF iframe Demo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <link rel="stylesheet" href="./demo.css">
+</head>
+
+<body>
+  <h1>DEMO: Microfront / Iframe </h1>
+  <div class="container">
+    <div class="col">
+      <h3>MF Router & Store (vue2 app)</h3>
+      <div class="card">
+        <iframe src="http://localhost:8089/?hostApp=demo"></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    window.addEventListener("message", (event) => {
+      console.log('iframe message', event.data);
+    }, false);
+  </script>
+
+</body>
+
+</html>
