@@ -1,3 +1,5 @@
+![Microfrontend POC cover image](cover-img.png)
+
 # Microfrontend Integration POC
 
 Proof of concept comparing different strategies for integrating **independently developed frontend modules at runtime**.
